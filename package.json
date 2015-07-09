@@ -1,6 +1,6 @@
 {
   "name": "winresize-event",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "debounced window resize event",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/egauci/winresize-event#readme",
   "dependencies": {
+    "events": "^1.0.2",
     "has-touch": "^1.0.1"
   }
 }
