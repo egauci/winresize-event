@@ -6,9 +6,9 @@ Object.defineProperty(exports, '__esModule', {
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _touchJs = require('./touch.js');
+var _hasTouch = require('has-touch');
 
-var _touchJs2 = _interopRequireDefault(_touchJs);
+var _hasTouch2 = _interopRequireDefault(_hasTouch);
 
 /*
  * Debounced window resize event emitter.
@@ -23,7 +23,7 @@ var _events = require('events');
 var _events2 = _interopRequireDefault(_events);
 
 var tmr = undefined,
-    timVal = _touchJs2['default'] ? 1 : 300,
+    timVal = _hasTouch2['default'] ? 1 : 300,
     emitter = new _events2['default'](),
     pubEmitter = {
   on: emitter.on.bind(emitter, 'winResize'),
@@ -34,7 +34,7 @@ var tmr = undefined,
     width = undefined;
 
 var computeSize = function computeSize() {
-  if (_touchJs2['default'] && window.orientation !== undefined) {
+  if (_hasTouch2['default'] && window.orientation !== undefined) {
     if (window.orientation === 0 || window.orientation === 180) {
       height = Math.max(window.innerHeight, window.innerWidth);
       width = Math.min(window.innerHeight, window.innerWidth);
