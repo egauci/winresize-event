@@ -3,6 +3,8 @@ winresize-event
 
 Debounced window resize suitable for desktop and mobile browsers.
 
+NOTE: This module is deprecated in favor of [viewport-event](https://github.com/egauci/viewport-event).
+
 Install
 -------
 
